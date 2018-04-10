@@ -8,7 +8,7 @@ reduced = {}
 for k, idea in ideas.items():
     sanitizedIdea = idea.lower()
     sanitizedIdea = re.sub(r"[.,!/_]", " ", sanitizedIdea)
-    sanitizedIdea = re.sub(r"['\"]", "", sanitizedIdea)
+    sanitizedIdea = re.sub(r"['\"-\\]", "", sanitizedIdea)
     sanitizedIdea = re.sub(r"\s+", " ", sanitizedIdea)
     sanitizedIdea = sanitizedIdea.strip()
 
